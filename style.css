@@ -1,0 +1,251 @@
+
+
+*,*::before
+,*::after{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+   text-decoration: none;
+}
+:root
+{
+    --naormal-padding:0 5px;
+    --primary-color:#3A54AA;
+    --secondary-color:#E7ECF4;
+    --font-dark-color:#B0B3C4;
+    --font-color:#ffff;
+   
+}
+a{
+    cursor: pointer;
+}
+body{
+    font-family: "Convergence", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+}
+
+button{
+    width:200px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color:var(--secondary-color);
+    border:0;
+    border-radius: 10px ;
+    font-size:18px;
+    cursor: pointer;
+    transition: 1s linear;
+}
+button:hover{
+   
+   letter-spacing: 2px; 
+}
+span{
+    color:var(--primary-color);
+    font-weight: 600;
+}
+.container{
+ 
+    width: 100%;
+    height: 100vh;
+    display: grid;  
+    grid-template-columns:1fr 1.2fr;
+}
+.frame1>p{
+    text-align: center;
+}
+.frame1{
+    position: relative;
+   background-color: var(--primary-color);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding:10px 20px;
+   gap: 10px;
+   color:var(--font-color); 
+   border: none;
+}
+.frame1 .img{
+    width:100%;
+    object-fit:cover;
+    object-position: center;
+}
+.frame2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap:50px;  
+}
+.final .d{
+    width:100px;
+}
+.frame2 #mid 
+{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+  gap: 55px;
+
+}
+.input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+   
+}
+.form_input{
+     width:180px;
+    height:40px;
+     border-radius: 4px;
+     padding:6px 6px 4px 10px;
+     border:0;
+     border-bottom: 2px solid var(--font-dark-color);
+     border-radius: 0.25rem;
+     outline: none;
+     font-size:1rem;
+}
+.form_label{
+    position: absolute;
+    top:8px;
+    left:15px;
+    background-color: white;
+    transition: top 200ms ease-in-out,
+    left 200ms ease-in-out,font-size 200ms ease-in;
+    cursor: text;
+}
+.form_input:not(:placeholder-shown),.form_input:focus{
+    border:2px solid var(--primary-color);
+    font-weight:15px;
+}
+.form_input:focus ~ .form_label,
+.form_input:not(:placeholder-shown).form_input:not(:focus) ~ .form_label {
+    top:-9px;
+    font-size:13px;
+    color:var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 2px;   
+}
+#top{
+    text-align: center;
+    line-height: 35px;
+}
+#top h2
+{
+    color:var(--primary-color);
+}
+#final{
+    line-height: 30px;
+    text-align: center;
+}
+#final i{
+    font-size: 25px;
+    color:var(--primary-color);
+}
+#final>a{
+     padding:var(--naormal-padding);
+}
+#final p a{
+    color:var(--primary-color); 
+    font-weight: 600;
+}
+
+/* for showing display errors*/
+.error{
+    color: red;
+    font-size: 12px;
+}
+.hidden{
+    display: none;
+}
+
+#arrow-up,#arrow-down{
+    display: none;
+}
+#arrow-up>i{
+    color:var(--primary-color);
+    font-size: 40px;
+    animation: flaot 1s linear infinite;
+}
+#arrow-down>i{
+    color: var(--secondary-color);
+    font-size:40px;
+    animation: flaot 1s linear infinite;
+  
+}
+@keyframes flaot{
+    0%{
+        transform: translate(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+}
+@media screen and (max-width:800px) 
+{
+    .container{
+        display: grid;  
+        grid-template-rows:repeat(2,minmax(100vh,auto));
+        overflow: hidden;
+        grid-template-columns: none;
+        height: auto;
+    }
+    #arrow-down{
+        position: absolute;
+        display: unset;
+        bottom: 15px;
+    }
+    #arrow-up{
+        position: absolute;
+        display: unset;
+        top: 15px;
+    }   
+}
+@media screen and (max-width:500px) 
+{
+     .frame1
+     {
+        gap:20px;
+     }
+     img{
+        height:450px;
+     }
+     .frame2{
+        padding:20px 0;
+        gap:20px;
+     }
+    .frame2 #mid 
+    {
+        display: grid;
+        grid-template-rows:repeat(6,1fr);
+        grid-template-columns: none;
+        gap:25px;
+    }
+    .form_input{
+        width:140px;
+        height:40px;
+   }
+   .form_label{
+     font-size: 0.8rem;
+   }
+  
+    .form_input:focus ~ .form_label,
+    .form_input:not(:placeholder-shown).form_input:not(:focus) ~ .form_label 
+    {
+        top:-6px;
+        font-size:12px;
+        letter-spacing:1px;   
+    }  
+    #arrow-up>i{
+        font-size: 30px;  
+    }
+    #arrow-down>i{
+        font-size:30px;
+    
+    }
+    
+}

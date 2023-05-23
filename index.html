@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Convergence&family=Lato:wght@300;400;700;900&family=Mukta:wght@300;400;600;700;800&family=Noto+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Sign-Up</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="frame1" id="head">
+            <h1>Welcome Back</h1>
+            <img class="img" src="img/108.svg" alt="">
+            <p>Sign up and discover a great ammount of opportunities!</p>
+            <a href="#final" id="arrow-down"><i class="fa-solid fa-angles-down"></i></a>
+        </div>
+        <form action="" class="frame2">
+            <a href="#head" id="arrow-up"><i class="fa-solid fa-angles-up"></i></a>
+            <div id="top">
+                <h2>Sign Up</h2>
+                <p>Please fill in this form to create a account</p>
+            </div>
+            <div id="mid">
+                <!--First Name-->
+                <div class="input-container">
+                    <input type="text" name="first-name" id="first-name" class="form_input" placeholder=" " required>
+                    <label for="first-name" class="form_label">First Name</label>
+                    <div for="first-name" class="displayer error hidden">Please enter a valid Text</div>
+                </div>
+                <!--Last Name-->
+                <div class="input-container">
+                    <input type="text" name="last-name" id="last-name" class="form_input" placeholder=" " required>
+                    <label for="last-name" class="form_label">Last Name</label>
+                    <div for="last-name" class="displayer error hidden">Please enter a valid</div>
+                </div>
+                <!--contact-->
+                <div class="input-container">
+                    <input type="tel" name="contact" id="contact" class="form_input" placeholder=" " required>
+                    <label for="contact" class="form_label">Contact</label>
+                    <div for="contact" class="displayer error hidden">Please enter a valid phone number</div>
+                </div>
+                <!--email-->
+                <div class="input-container">
+                    <input type="email" name="email" id="email" class="form_input" placeholder=" " required>
+                    <label for="email" class="form_label">Email</label>
+                    <div for="contact" class="displayer error hidden">please enter a valid email</div>
+                </div>
+                <!--password-->
+                <div class="input-container">
+                    <input type="password" name="password" id="password" class="form_input" placeholder=" " required>
+                    <label for="password" class="form_label">Password</label>
+                    <div for="contact" class="displayer error hidden">requires minimum 8 character</div>
+                </div>
+                <!--confirm password-->
+                <div class="input-container">
+                    <input type="password" name="cfm-password" id="cfm-password" class="form_input" placeholder=" "
+                        required>
+                    <label for="cfm-password" class="form_label">Confirm Password</label>
+                    <div for="contact" class="displayer error hidden">password not match</div>
+                </div>
+
+            </div>
+            <div id="last">
+                <button type="submit" id="btn">Create Account</button>
+            </div>
+            <div id="final">
+                <p>Already have an account? <a href="">Log in</a> or</p>
+                <a href=""> <i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-brands fa-google"></i></a>
+            </div>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

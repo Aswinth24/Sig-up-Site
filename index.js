@@ -12,7 +12,17 @@ let arrowDown=document.querySelector('#arrow-down');
 let frame1=document.querySelector('.frame1');
 let frame2=document.querySelector('.frame2');
 
+arrowDown.addEventListener('click',()=>{
+  frame1.classList.toggle('display');
+  frame2.classList.toggle('display');
 
+});
+arrowUp.addEventListener('click',()=>{
+    frame2.classList.toggle('display');
+    frame1.classList.toggle('display');
+  
+  });
+  
 const numberPattern=/^[6-9]{1}[0-9]{9}$/;//for 10 nubmers
 const emailPattern=/\w+@[a-z]+\.com$/;  // for email 
 const passwordPattern=/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;

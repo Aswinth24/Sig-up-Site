@@ -194,6 +194,16 @@ span{
         grid-template-columns: none;
         height: auto;
     }
+   
+}
+@media screen and (max-width:500px) 
+{
+    .container
+    {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+    }
     #arrow-down{
         position: absolute;
         display: unset;
@@ -204,19 +214,12 @@ span{
         display: unset;
         top: 15px;
     }   
-}
-@media screen and (max-width:500px) 
-{
-     .frame1
+    .frame1
      {
         gap:20px;
      }
      img{
         height:450px;
-     }
-     .frame2{
-        padding:20px 0;
-        gap:20px;
      }
     .frame2 #mid 
     {
@@ -232,7 +235,6 @@ span{
    .form_label{
      font-size: 0.8rem;
    }
-  
     .form_input:focus ~ .form_label,
     .form_input:not(:placeholder-shown).form_input:not(:focus) ~ .form_label 
     {
@@ -248,4 +250,7 @@ span{
     
     }
     
+}
+.display{
+    display: none;
 }

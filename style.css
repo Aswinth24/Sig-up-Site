@@ -202,7 +202,6 @@ span{
         height: 100vh;
         justify-content: center;
         flex-direction: column;
-        gap:0;
     }
     #arrow-down{
         position: absolute;

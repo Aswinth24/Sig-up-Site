@@ -1,5 +1,3 @@
-
-
 *,*::before
 ,*::after{
     margin:0;
@@ -203,26 +201,33 @@ span{
         display: flex;
         height: 100vh;
         justify-content: center;
+        flex-direction: column;
+        gap:0;
     }
     #arrow-down{
         position: absolute;
-        display: unset;
+        display: block;
         bottom: 15px;
     }
     #arrow-up{
+        display: block;
         position: absolute;
-        display: unset;
         top: 15px;
     }   
     .frame1
      {
+        height: 100%;
         gap:20px;
      }
-     img{
+     .frame1 img{
         height:450px;
+     }
+     .frame2{
+        height: 100%;
      }
     .frame2 #mid 
     {
+       
         display: grid;
         grid-template-rows:repeat(6,1fr);
         grid-template-columns: none;
@@ -249,8 +254,8 @@ span{
         font-size:30px;
     
     }
+    .display{
+        display: none;
+    }
     
-}
-.display{
-    display: none;
 }
